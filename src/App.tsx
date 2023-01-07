@@ -8,7 +8,7 @@ import User from "./pages/User/User";
 const App = (): JSX.Element => {
 
   return(
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Routes>
       <Route>
         <Route path="/" element={<Login/>}/>

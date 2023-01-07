@@ -3,7 +3,7 @@ import axios from "axios";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { useNavigate } from "react-router";
 const Login = (): JSX.Element => {
     const [id, setId] = useState<string>();
     const [pass, setPass] = useState<string>();
@@ -34,7 +34,8 @@ const Login = (): JSX.Element => {
     };
 
     const SignUp = () => {
-      window.location.href = "/SignUp";
+      const navigate = useNavigate();
+      navigate("/SignUp");
     }
 
       return (
