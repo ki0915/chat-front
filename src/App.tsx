@@ -2,13 +2,15 @@ import React, { ChangeEvent, useState } from "react";
 import "./App.css";
 import Login from "./pages/Login/components/Login";
 import SignUp from "./pages/Login/components/SignUp";
-import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import {HashRouter, Route, Routes} from 'react-router-dom';
 import Main from "./pages/Main/Main";
 import User from "./pages/User/User";
+
 const App = (): JSX.Element => {
 
   return(
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <>
+    <HashRouter>
     <Routes>
       <Route>
         <Route path="/" element={<Login/>}/>
@@ -17,9 +19,9 @@ const App = (): JSX.Element => {
         <Route path="/Main" element={<Main/>}/>
       </Route>
     </Routes>
-    </BrowserRouter>
+    </HashRouter>
+    </>
   );
-   
 };
 
 export default App;

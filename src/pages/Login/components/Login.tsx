@@ -34,8 +34,7 @@ const Login = (): JSX.Element => {
     };
 
     const SignUp = () => {
-      const navigate = useNavigate();
-      navigate("/SignUp");
+      window.location.href = '/SignUp'
     }
 
       return (

@@ -55,7 +55,7 @@ import {
 
     const deleteFriend = async (id: string) => {
       try {
-          await axios.post("http://localhost:8080/friends/delete", { userId: myId, friend: id});
+          await axios.post("http://52.255.186.26:8080/friends/delete", { userId: myId, friend: id});
       } catch (e) {
         if (axios.isAxiosError(e) && e.response) {
           const { data } = e.response;
